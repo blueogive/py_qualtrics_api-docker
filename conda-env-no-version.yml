@@ -1,0 +1,23 @@
+# NB: The one package with an explicit version specification in this file is
+# CPython itself.
+# To remove the version specifications in the packages below use this regex:
+# Search: - ([A-z0-9_\-]{2,})=[A-z0-9_\-\.]{2,}?=[A-z0-9_\-]*
+# Replace: - $1
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas
+  - pytest
+  - python=3.7.6=h357f687_4_cpython
+  - python-dotenv
+  - pytz
+  - pyyaml
+  - readline
+  - requests
+  - setuptools
+  - sqlalchemy
+  - urllib3
+  - yaml
+prefix: /opt/conda
