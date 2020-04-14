@@ -116,8 +116,10 @@ ARG VCS_URL=${VCS_URL}
 ARG VCS_REF=${VCS_REF}
 ARG BUILD_DATE=${BUILD_DATE}
 
+ENV PATH=${PATH}:/home/docker/.local/bin
+
 RUN pip install --no-cache-dir \
-      git+https://github.com/blueogive/py_qualtrics_api.git \
+      git+https://github.com/blueogive/py_qualtrics_api.git
 
 WORKDIR ${HOME}/work
 
