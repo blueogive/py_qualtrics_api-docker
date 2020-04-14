@@ -110,15 +110,16 @@ COPY ${PIP_REQ_FILE} ${PIP_REQ_FILE}
 RUN source ${HOME}/.bashrc \
     && conda activate base \
     && pip install --no-cache-dir -r ${PIP_REQ_FILE} \
-    && pip install --no-cache-dir \
-      git+https://github.com/blueogive/py_qualtrics_api.git \
     && rm ${PIP_REQ_FILE}
-
-WORKDIR ${HOME}/work
 
 ARG VCS_URL=${VCS_URL}
 ARG VCS_REF=${VCS_REF}
 ARG BUILD_DATE=${BUILD_DATE}
+
+RUN pip install --no-cache-dir \
+      git+https://github.com/blueogive/py_qualtrics_api.git \
+
+WORKDIR ${HOME}/work
 
 # Add image metadata
 LABEL org.label-schema.license="https://opensource.org/licenses/MIT" \
