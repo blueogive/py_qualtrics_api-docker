@@ -1,2 +1,4 @@
 # -*- coding: utf-8 -*-
 DateTime==4.3
+pyodbc==4.0.30
+pymssql==2.1.4

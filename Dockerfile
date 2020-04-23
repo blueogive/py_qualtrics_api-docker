@@ -19,6 +19,7 @@ RUN apt-get update --fix-missing \
         --no-install-recommends \
         ca-certificates \
         curl \
+        g++ \
         git \
         gnupg2 \
         gosu \
@@ -26,6 +27,7 @@ RUN apt-get update --fix-missing \
         make \
         software-properties-common \
         wget \
+        unixodbc-dev \
         unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
